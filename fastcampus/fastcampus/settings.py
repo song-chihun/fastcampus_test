@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-538n&-6%afz-srb18&-%c*z6j=o94v97^o)9)6c-pr7+l8ebb8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-13-124-207-64.ap-northeast-2.compute.amazonaws.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'order',
     'rest_framework',
+    'user',
     'boss',
     'delivery'
 ]
@@ -83,7 +84,7 @@ DATABASES = {
         'NAME': 'project1',
         'USER' : 'admin',
         'PASSWORD':'songch1!',
-        'HOST':'database-2.cfxj8nbuuyul.ap-northeast-2.rds.amazonaws.com',
+        'HOST':'database-1.cfxj8nbuuyul.ap-northeast-2.rds.amazonaws.com',
         'PORT':'3306',
         'OPTIONS':{
             'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
